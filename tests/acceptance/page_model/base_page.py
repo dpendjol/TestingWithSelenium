@@ -10,4 +10,4 @@ class BasePage:
 
     @property
     def title(self):
-        return self.driver.find_elements(*BasePageLocators.TITLE)
+        return self.driver.find_element(*BasePageLocators.TITLE)
