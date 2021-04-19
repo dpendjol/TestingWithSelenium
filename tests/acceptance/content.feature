@@ -10,6 +10,15 @@ Feature: Test that pages have correct content
     Then There is a title shown on the page
     And The title tag had content "This is the homepage"
 
+  Scenario: User can create new post
+    Given I am on the new post page
+    When I enter "Test post" in the "title" field
+    And I enter "Test content" in the "content" field
+    And I press the submit button
+    Then I am on the blog page
+    Given I wait for the posts to load
+    Then I can see there is a post with the title "Test post" in the posts section
+
   Scenario: Blog page loads the posts
     Given I am on the blogpage
     And I wait for the posts to load

@@ -11,7 +11,7 @@ class BlogPage(BasePage):
         return self.driver.find_element(*BlogPageLocators.POSTS_SECTION)
     
     @property
-    def posts(self):
+    def all_posts(self):
         return self.driver.find_elements(*BlogPageLocators.POSTS)
     
     @property
